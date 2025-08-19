@@ -54,5 +54,4 @@ uv run python main.py
 - **Retriever** – adjust chunk size, overlap, or vector DB in ingestion.py.
 - **Models** – swap out embeddings (GoogleGenerativeAIEmbeddings, OpenAIEmbeddings, etc.) in model.py.
 - **Graders** – tune hallucination/answer grader prompts in graph/chains/.
-- **Config** – change defaults (top_k, rerank_k, timeout) in config.py.
 
