@@ -9,4 +9,19 @@ dependencies = [
     "langchain-google-genai>=2.1.9",
     "langgraph>=0.6.5",
     "python-dotenv>=1.1.1",
+    "typer>=0.12.5",
+    "rich>=13.9.4",
+    "pydantic>=2.9.2",
+    "tenacity>=9.0.0",
+    "watchdog>=5.0.3",
 ]
+
+[project.scripts]
+ai-code = "agent.cli:app"
+
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["agent", "graph"]

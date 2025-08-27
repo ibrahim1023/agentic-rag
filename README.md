@@ -19,6 +19,13 @@ adaptive-rag/
 │   ├── state.py            # Shared graph state definition
 │   ├── nodes/              # Individual nodes (retrieve, generate, grade, websearch)
 │   ├── chains/             # LLM chains for grading & routing
+├── agent/
+│   ├── __init__.py
+│   ├── config.py           # Env/config management for the coding agent
+│   ├── llm.py              # LLM wrapper utilities
+│   ├── tools.py            # Filesystem, search, edit, run tools
+│   ├── agent.py            # Coding agent core loop
+│   └── cli.py              # Typer CLI entrypoint (ai-code)
 ├── consts.py           # Node constants
 ├── ingestion.py            # Builds retriever/vectorstore from documents
 ├── model.py                # Embedding & model setup
@@ -48,6 +55,17 @@ USER_AGENT=adaptive-rag/1.0
 4. Run
 ```
 uv run python main.py
+```
+
+### 🧑‍💻 AI Coding Agent CLI
+Run the interactive coding agent that can read/edit files and implement tasks:
+```
+uv run ai-code
+```
+Environment variables:
+```
+GOOGLE_API_KEY=...      # or set up alternative provider in agent/llm.py
+WORKSPACE_DIR=/workspace # optional, defaults to current working dir
 ```
 
 ## 🛠 Customization
